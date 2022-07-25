@@ -1,0 +1,11 @@
+<meta charset="UTF-8">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+  </form>
+  {% for ij in load%}
+  <img src="{{MEDIA_URL}}/{{ij}}" height="200px" width="200px"><br><br>
+  {% endfor %}
+    <img src="data:image/jpg;base64,{{image}}" height="200px" width="200px"><br><br>
+

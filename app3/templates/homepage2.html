@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=0.1">
+  <title>{{name}}</title>
+  <style>
+        body{background:pink;height:900px;background-repeat:no-repeat;}
+        a{text-decoration:none;}
+        #left_bar li{list-style:none;margin-top:7px;padding-top:8px;padding-left:100px;margin-left:-39px;height:30px;border:1px solid white;}
+        #left_bar{background:white;height:925px;width:300px;margin-top:-10px;margin-left:20px;position:fixed;text-decoration:none;}
+        #left_bar ul{padding-top:250px;}
+        #left_bar li:hover{border-radius:50px;border:1px solid violet;}
+        #bc{border:2px solid black; height:100px;width:100px;border-radius:50px;position:fixed;margin-top:75px;margin-left:90px;}
+        #image{border-radius:50px;margin-left:2px;margin-top:2px;}
+        #name{background:transparent;position:absolute;margin-top:190px;margin-left:90px;border:transparent;}
+        #main_pg1{margin-left:330px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg2{margin-left:330px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg3{margin-left:330px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg4{margin-left:330px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg5{margin-left:330px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg6{margin-left:330px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg7{margin-left:330px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg{height:920px;width:790;margin-top:-10px;overflow-y:scroll;}
+        .main_pg{justify-content:center;display:flex;border-top:2px solid pink;}
+        #images_pg{padding-top:50px;}
+        #image1{border-radius:50px;height:50px;width:50px; margin-left:10px;margin-top:10px;}
+        #right_bar{margin-left:1130px;margin-top:-920px;position:fixed;background:white;width:380px;height:920px;}
+        #right_bar1{margin-top:-12px;position:relative;margin-top:-20px;overflow-y:auto;width:380px;height:840px;}
+        #mesid{margin-left:80px;margin-top:-40px;}
+        #mac{height:60px;padding-bottom:8px;border-bottom:1px solid violet;border-radius:50px;margin-top:10px;}
+        #mac:hover{border:2px solid fuchsia;border-radius:50px;height:62px;}
+        h2{padding-left:30px;background:violet;height:40px;width:350px;padding-top:20px;}
+        #left_bar #left_bar1 li.active{background:violet;border-radius:50px;}
+        #main_pg1 #profile{height:900px;width:790px;background:white;position:absolute;margin-top:-50px;}
+        #main_pg1 #profile_details{margin-top:10px;margin-left:250px;}
+        #main_pg1 #profile_details input{margin-top:20px;width:300px;border:transparent;border-bottom:2px solid violet;}
+        #main_pg1 #line{border:1px solid violet;width:300px;background:violet;}
+        #main_pg1 #profile_image #profile_image{border:2px solid black;border-radius:100px;height:200px;width:200px;margin-top:150px;margin-left:280px;}
+        #main_pg1 #id{margin-left:330px;margin-top:30px;width:200px;border:transparent;}
+        #main_pg2 input{border:transparent;}
+        #main_pg2 #heading{margin-top:100px;margin-left:350px;position:relative;}
+        #main_pg2 #upload{background:white;height:960px;width:790px;margin-top:-60px;overflow-y:auto;}
+        #main_pg2 #image2{border-radius:50px;height:50px;width:50px; margin-left:70px;margin-top:50px;border:2px solid black;position:relative;}
+        #main_pg2 #ids{margin-left:150px;margin-top:-30px;}
+        #main_pg2 #lines{background:violet;border:1px solid violet;width:770px;height:0px;}
+        #main_pg2 #upload_file1{margin-top:20px;background:lightgray;height:200px;width:700px;position:relative;margin-left:40px;padding-top:150px;padding-bottom:100px;text-align:center;}
+        #main_pgmm{background:white;width:780px;height:920px;position:absolute;margin-top:-10px;}
+        #main_pgmm #pgs{background:lightgray;height:900px;margin-top:-0px;padding-top:px;overflow-y:scroll;padding-right:10px;margin-left:00px;width:200px;}
+        #main_pgmm li{list-style:none;height:150px;width:130px;margin-left:0px;background:white;margin-top:15px;border-radius:30px;border:1px solid violet;}
+        #main_pgmm #image2{border-radius:50px;height:50px;width:50px; margin-left:35px;margin-top:25px;border:2px solid black;position:relative;}
+        #main_pgmm #pgs #request {margin-left:35px;margin-top:-28px;width:50px;}
+        #main_pgmm #ids{margin-left:40px;margin-top:10px;}
+        #main_pgmm #profile{height:900px;width:50px;background:white;position:absolute;margin-top:-50px;margin-left:50px;}
+        #main_pgmm #profile_details{margin-top:100px;margin-left:50px;}
+        #main_pgmm #profile_details input{margin-top:20px;width:300px;border:transparent;border-bottom:2px solid violet;}
+        #main_pgmm #line{border:1px solid violet;width:300px;background:violet;}
+        #main_pgmm #profile_image #profile_image{border:2px solid black;border-radius:100px;height:200px;width:200px;margin-top:110px;margin-left:100px;}
+        #main_pgmm #id{margin-left:100px;margin-top:30px;width:200px;}
+        #main_pgmm #main_pg421{scroll-behavior:smooth;height:920px;margin-top:-920px;width:570px;overflow-y:scroll;margin-left:210px;}
+        #main_pgmm input{border:transparent;}
+        #main_pgmm li div{height:150px;width:130px;border-radius:30px;}
+        #main_pgmm a{margin-left:0px;}
+        #main_pgmm a li .active2{background:violet;margin-left:-0px;}
+
+
+
+</style>
+      <script>
+    function colorchange(e){
+    var el=document.querySelector(".active");
+    if (el){
+    el.classList.remove('active');}
+    e.target.classList.add("active");}
+    function colorchangeone(e){
+    var el=document.querySelector(".active2");
+    if (el){
+    el.classList.remove('active2');}
+    e.target.classList.add("active2");}
+
+    </script>
+ </head>
+ <body>
+
+  <div id="left_bar"> 
+   <label for="image">
+    <div id="bc">
+     <img src="data:image/jpg;base64,{{profile}}" height="96px" id="image" width="96px">
+    </div> </label>
+   <h3 id="name"> {{id}}</h3>
+   <nav id="left_bar1">
+    <ul onclick="colorchange(event)">
+     <a href="#main_pg1"><li id="one" >Profile</li></a>
+     <a href="#main_pg2"><li id="two">upload</li></a>
+     <a href="#main_pg3"><li id="three">friends</li></a>
+     <a href="#main_pg4"><li id="four">friend requests</li></a>
+     <a href="#main_pg5"><li id="five">photos</li></a>
+     <a href="#main_pg6"><li id="six">videos</li></a>
+     <a href="#main_pg7"><li id="seven">settings</li></a>
+    </ul>
+   </nav>
+  </div>
+  <div id="main_pg">
+  <div class="main_pg" id="main_pg1"> 
+     
+   <div id="profile">
+ <div id="profile_image">
+   <form method="post" enctype="multipart/form-data" >{% csrf_token %}
+      <label for="profile_images">
+   <img src="data:image/jpg;base64,{{profile}}" id="profile_image" >
+  </label>
+ <input type="file" name="proimage" id="profile_images"  value="{{savedpro}}" style="display:none">
+ 
+ <input type="submit" value="save image" style="height:25px;width:80px;color:white;background:blue;margin-left:340px;border:transparent;">
+</form>
+ <form method="post" enctype="multipart/form-data" >{% csrf_token %}
+ <input type="text" value="{{id}}" name="id" id="id"><br><br>
+ <div id="profile_details">
+ <label for="profile_name">Name<br>
+  <div id="line"></div>
+ <input type="text" name="name" placeholder="Enter Your Name" id="profile_name" value="{{name}}">
+  </label><br><br>
+ <label for="profile_bod">Date of Birth<br>
+    <div id="line"></div>
+  <input type="text" name="bod" placeholder="DD/MM/YYYY"  id="profile_bod" value="{{bod}}">
+ </label><br><br>
+ <label for="profile_address">Address<br>
+    <div id="line"></div>
+  <input type="text" name="address" placeholder="Address" id="profile_address" value="{{address}}">
+ </label><br><br>
+ <label for="profile_email">Email<br>
+    <div id="line"></div>
+  <input type="text" name="email" placeholder="example@gmail.com" id="profile_email" value="{{email}}">
+ </label><br><br>
+ <label for="profile_phone">phone Number<br>
+    <div id="line"></div>
+  <input type="text" name="number" placeholder="+91-XXXXX XXXXX" id="profile_phone" value="{{number}}">
+ </label><br>
+ <input type="submit" value="save" style="height:25px;width:80px;color:white;background:blue;margin-left:70px;border:transparent;">
+</div></form>
+
+</div>
+   </div>
+  
+  </div>
+  <div class="main_pg"  id="main_pg2"> 
+   <div id="upload">
+    <div id="upload_scroll">
+     <div id="heading"><h1>Upload</h1></div>
+      
+        {% if image %}
+        {% for image in image %}
+        <label for="image2">
+         <div id="mac1">
+          <img src="data:image/jpg;base64,{{profile}}"height="96px" id="image2" width="96px">
+         </div>
+      </label>
+<h6 id="ids">{{id}} </h6>
+<div id="lines"></div>
+        <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br><br><br><br>
+        {% endfor %}
+        {% endif %}
+        <form method="post" enctype="multipart/form-data" >{% csrf_token %}
+         <label for="image2">
+            <div id="mac1">
+             <img src="data:image/jpg;base64,{{profile}}"height="96px" id="image2" width="96px">
+            </div>
+         </label>
+   <h6 id="ids">{{id}} </h6>
+   <div id="lines"></div>
+           <div id="upload_files">
+            <label for="file">
+                <div id="upload_file1">
+                    <h1 id="up">upload</h1>
+                </div>
+            </label>
+            <div id="upload_file"  >
+                <input type="file" name="myfile"  value="{{image}}"  id="file" style="display:none;" >
+            </div><br><br><input type="submit" id="upfile" style="background:blue;margin-left:370px;height:30px;color:white;" value="upload" >
+         </form>
+         </div>
+    </div>
+   </div>
+  <div class="main_pg" id="main_pg3">
+   <div id="images_pg">
+    <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br>
+    <br>
+    <br>
+    <br>
+    <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br>
+    <br>
+    <br>
+    <br>
+       <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br>
+    <br>
+    <br>
+    <br>
+       <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br>
+    <br>
+    <br>
+    <br>
+       <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br>
+    <br>
+    <br>
+    <br>
+       <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br>
+    <br>
+    <br>
+    <br>
+       <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br>
+    <br>
+    <br>
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br>
+    <br>
+    <br>
+    <br>
+       <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+   </div>
+  </div>
+  <div class="main_pg" id="main_pg4">
+<div id="main_pgmm">
+<div id="pgs">
+    <nav>
+        <ol onclick="colorchangeone(event)">
+         {% for friends,value in friends.items %}
+        <a href="#{{friends}}">
+         <li  id="one" >
+                 <div id="all">
+                 <label for="image2">
+                     <div id="mac1">
+                         <img src="data:image/jpg;base64,{{image}}" height="96px" id="image2" width="96px">
+                         <h6 id="ids">{{value}}</h6>
+                     </div>
+
+                 </label>
+
+              </div>
+         </li>
+        </a><div id="request"><input type="submit" value="request" style="background:blue;border:transparent;" ></div>
+        {% endfor %}
+        </ol>
+    </nav>
+</div>
+
+     <div id="main_pg421">
+      {% for friends,value in friends.items %}
+     <div class="main_pg42" id="{{friends}}" style="background:white;height:900px;position:relative;">
+   <div id="profile">
+ <div id="profile_image">
+  <label for="profile_images">
+   <img src="data:image/jpg;base64,{{image}}" id="profile_image" ></label>
+ <input type="subbmit" name="proimage" id="profile_images" style="display:none">
+ <input type="submit" value="VADDE ADARSH" name="id" id="id">
+ <div id="profile_details">
+ <label for="profile_name">{{i}}<br>
+  <div id="line"></div>
+ <h3 id="profile_name">kjklgj</h3>
+  </label><br><br>
+ <label for="profile_bod">Date of Birth<br>
+    <div id="line"></div>
+  <h3 id="profile_bod">hulj</h3>
+ </label><br><br>
+ <label for="profile_address">Address<br>
+    <div id="line"></div>
+  <h3 id="profile_address">ngnkkj</h3>
+ </label><br><br>
+ <label for="profile_email">Email<br>
+    <div id="line"></div>
+  <h3 id="profile_email"></h3>
+ </label><br><br>
+ <label for="profile_phone">phone Number<br>
+    <div id="line"></div>
+  <h3 id="profile_phone"></h3>
+ </label><br>
+ </div>
+</div>
+   </div>
+  </div>
+  {% endfor %}
+
+</div>
+</div>
+</div>
+  <div class="main_pg"  id="main_pg5">
+   <div id="images_pg">
+    <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+       <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+       <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+
+   </div>
+  </div>
+  <div class="main_pg"  id="main_pg6">
+   <div id="images_pg">
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+   </div>
+  </div>
+  <div class="main_pg" id="main_pg7">
+   <div id="images_pg">
+    <br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br><br><img src="data:image/jpg;base64,{{image}}" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+   </div>
+  </div>
+   </div>
+  <div id="right_bar">
+   <h2 id="head">Messages</h2>
+   <div id="right_bar1">
+       <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6>
+       <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6>
+       <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6>
+       <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6>
+       <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="data:image/jpg;base64,{{image}}" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6>
+
+   </div>
+  </div>
+ </body>
+</html>

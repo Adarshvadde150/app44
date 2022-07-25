@@ -1,0 +1,47 @@
+<html>
+ <head><title>login</title>
+<style> #all{background-image: linear-gradient(pink,blue);height:900px;width:1550px;position:fixed;margin-top: -20px;margin-left: -10px;}
+    #loginone{height:900px;border:2px solid transparent;width:300px;margin-left: 550px;position:relative;}
+   #login{width:260px;height:160px;background:white;border-radius:20px;margin-top:300px;padding:20px 20px 20px 20px;}
+   #createone{height:900px;border:2px solid transparent;position:relative;width:300px;margin-left:550px;}
+ #create{height:320px;width:260px;background:white;border-radius:30px;margin-top:300px;padding:20px 20px 20px  20px;}
+ #border{border:2px solid black;border-radius:20px;padding:10px 20px 20px 20px;}
+</style>
+ </head>
+ <body ><div id="all"> </div>
+  <form  method='POST'>{% csrf_token %}
+<div id="loginone">
+  <div id="login">
+  <fieldset>
+   <legend >login</legend>
+   <lable for="username">User Name
+   </lable>
+   <input type="text" name="loginname" id="username">
+   <br>
+   <lable for="password">password
+   </lable><br>
+   <input type="password" name="password" id="password">
+   <br><br>
+   <input type="submit" value="login">
+   <a href="#createone">create account</a>
+   </fieldset>
+   </div>
+</div>
+  </form>
+  <form  method='POST'>{% csrf_token %}
+    <div id='createone'>
+    <div id ='create'>
+    <div id="border">
+    <h3>Name</h3>
+    <input type="text" name="name"  required>
+    <h3>Email </h3>
+    <input type="email" name="email" required>
+    <h3>Password</h3>
+    <input type="password" name="password" required>
+    <br><br>
+    <input type="submit" value="create account"><a href="#loginone">back</a>
+    </div>
+    </div></div>
+    </form>
+ </body>
+</html>

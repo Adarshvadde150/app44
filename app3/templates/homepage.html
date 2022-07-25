@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta name="viewport" content="width=device-width,minimum-scale=0,maximum-scale=1">
+  <title>{{id}}</title>
+  <style>
+        #main_pg,#left_bar,#right_bar{display:flex;flex-wrap:wrap;}
+        @media screen and (max-width:500px){#left_bar,#right_bar{display:none}.main_pg1{position:relative;}.main_pg1{margin-left:-330px;margin-top:100px;}}
+        body{background:pink;background-repeat:no-repeat;}
+        a{text-decoration:none;}
+        #left_bar li{list-style:none;margin-top:7px;padding-top:8px;width:200px;padding-left:100px;margin-left:-39px;height:30px;border:1px solid white;}
+        #left_bar{background:white;height:920px;width:305px;margin-top:-10px;margin-left:10px;text-decoration:none;position:absolute;}
+        #left_bar ul{margin-top:-80px;}
+        #left_bar li:hover{border-radius:50px;border:1px solid violet;}
+        #left_bar22{background:white;margin-top:-100px;margin-left:330px;text-decoration:none;height:100px;width:800px;position:relative;}
+        #left_bar2 ol{margin-top:-50px;margin-left:30px;}
+        #left_bar22 li{list-style:none;border:1px solid white;height:30px;display:inline-block;width:70px;padding-left:20px;padding-top:10px}
+        #left_bar22 li:hover{border-radius:50px;border:1px solid violet;}
+        #image2{border:2px solid black; height:50px;width:50px;border-radius:50px;margin-top:30px;margin-left:15px;border-radius:50px;}
+        #name2{background:transparent;position:absolute;margin-top:10px;margin-left:10px;border:transparent;}
+        #image{border:2px solid black; height:100px;width:100px;border-radius:50px;margin-top:75px;margin-left:90px;border-radius:50px;}
+        #name{background:transparent;position:absolute;margin-top:200px;margin-left:110px;border:transparent;}
+        #main_pg #main_pg1{margin-left:340px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg #main_pg2{margin-left:340px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg #main_pg3{margin-left:340px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg #main_pg4{margin-left:340px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg #main_pg5{margin-left:340px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg #main_pg6{margin-left:340px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg #main_pg7{margin-left:340px;margin-top:0px;overflow-y:auto;background:white;width:790px;height:900px;position:relative;}
+        #main_pg{height:3000px;width:500;overflow-y:auto;position:absolute;margin-top:-10px;margin-left:-10px;}
+        #images_pg{padding-top:50px;}
+        #image1{border-radius:50px;height:50px;width:50px; margin-left:10px;margin-top:10px;}
+        #right_bar{margin-left:1130px;position:absolute;background:white;width:385px;height:935px;margin-top:-25px;}
+        #right_bar1{margin-top:-12px;position:relative;;overflow-y:auto;width:390px;height:850px;}
+        #mesid{margin-left:80px;margin-top:-40px;}
+        #mac{height:60px;padding-bottom:8px;border-bottom:1px solid violet;border-radius:50px;margin-top:10px;}
+        #mac:hover{border:2px solid fuchsia;border-radius:50px;height:62px;}
+        h2{padding-left:30px;background:violet;height:40px;width:350px;padding-top:20px;}
+        #left_bar #left_bar1 li.active{background:violet;border-radius:50px;}
+        #main_pg1 #profile{height:900px;width:790px;background:white;position:absolute;margin-top:-50px;}
+        #main_pg1 #profile_details{margin-top:10px;margin-left:250px;}
+        #main_pg1 #profile_details input{margin-top:20px;width:300px;border:transparent;border-bottom:2px solid violet;}
+        #main_pg1 #line{border:1px solid violet;width:300px;background:violet;}
+        #main_pg1 #profile_image #profile_image1{border:2px solid black;border-radius:100px;height:200px;width:200px;margin-top:150px;margin-left:280px;}
+        #main_pg1 #id{margin-left:330px;margin-top:30px;width:200px;border:transparent;}
+        #main_pg2 input{border:transparent;}
+        #main_pg2 #heading{margin-top:100px;margin-left:350px;position:relative;}
+        #main_pg2 #upload{background:white;height:960px;width:790px;margin-top:-60px;overflow-y:auto;}
+        #main_pg2 #image2{border-radius:50px;height:50px;width:50px; margin-left:70px;margin-top:50px;border:2px solid black;position:relative;}
+        #main_pg2 #ids{margin-left:150px;margin-top:-30px;}
+        #main_pg2 #lines{background:violet;border:1px solid violet;width:770px;height:0px;}
+        #main_pg2 #upload_file1{margin-top:20px;background:lightgray;height:200px;width:700px;position:relative;margin-left:40px;padding-top:150px;padding-bottom:100px;text-align:center;}
+        #main_pgmm #pgs{background:lightgray;height:920px;margin-top:-0px;padding-top:10px;overflow-y:scroll;padding-right:10px;margin-left:00px;width:200px;}
+        #main_pgmm li{list-style:none;height:150px;width:130px;margin-left:0px;background:white;margin-top:15px;border-radius:30px;border:1px solid violet;}
+        #main_pgmm #image2{border-radius:50px;height:50px;width:50px; margin-left:35px;margin-top:25px;border:2px solid black;position:relative;}
+        #main_pgmm #pgs #request {margin-left:35px;margin-top:-28px;width:50px;}
+        #main_pgmm #ids{margin-left:40px;margin-top:10px;}
+        #main_pgmm #profile{height:920px;width:550px;background:white;position:absolute;padding-left:0px;margin-left:20px;overflow-y:auto;}
+        #main_pgmm #profile_details{margin-top:120px;margin-left:50px;width:300px;}
+        #main_pgmm #line{border:1px solid violet;width:300px;background:violet;}
+        #main_pgmm #profile_image #profile_image1{border:2px solid black;border-radius:100px;height:200px;width:200px;margin-top:110px;margin-left:100px;}
+        #main_pgmm #id{margin-left:100px;margin-top:30px;width:200px;}
+        #main_pgmm #main_pg421{scroll-behavior:smooth;height:920px;margin-top:-900px;width:580px;overflow-y:auto;margin-left:210px;}
+        #main_pgmm input{border:transparent;}
+        #main_pgmm li div{height:150px;width:130px;border-radius:30px;}
+        #main_pgmm a{margin-left:0px;}
+        #main_pgmm li .active2{background:violet;margin-left:-0px;}
+</style>
+     <script>
+    function colorchange(e){
+    var el=document.querySelector(".active");
+    if (el){
+    el.classList.remove('active');}
+    e.target.classList.add("active");}
+    function colorchangeone(e){
+    var el=document.querySelector(".active2");
+    if (el){
+    el.classList.remove('active2');}
+    e.target.classList.add("active2");}
+    var loadFile = function(event) {
+  var image = document.getElementById('image');
+  image.src = URL.createObjectURL(event.target.files[0]);
+   var image = document.getElementById('profile_image1');
+  image.src = URL.createObjectURL(event.target.files[0]);};
+  var upload=function(event){
+  var image = document.getElementById('imagee');
+  image.src= URL.createObjectURL(event.target.files[0]);
+
+};
+    </script>
+ </head>
+ <body>
+
+  <div id="main_pg">
+   <div class="main_pg1">
+<div id="left_bar22">
+    <label for="image2">
+    <div id="bc2">
+     <img src="data:image/jpg;base64,{{profile}}" height="96px" id="image2" width="96px">
+    </div> </label>
+   <h3 id="name2"> {{id}}</h3>
+   <nav id="left_bar2">
+    <ol onclick="colorchange(event)">
+     <a href="#main_pg1"><li id="one" >Profile</li></a>
+     <a href="#main_pg2"><li id="two">upload</li></a>
+     <a href="#main_pg3"><li id="three">friends</li></a>
+     <a href="#main_pg4"><li id="four">friend requests</li></a>
+     <a href="#main_pg5"><li id="five">photos</li></a>
+     <a href="#main_pg6"><li id="six">videos</li></a>
+     <a href="#main_pg7"><li id="seven">settings</li></a>
+    </ol>
+   </nav>
+  </div>
+  <div class="main_pg" id="main_pg1">
+  <div id="profile">
+ <div id="profile_image">
+   <form method="post" enctype="multipart/form-data" >{% csrf_token %}
+      <label for="profile_images">
+   <img src="data:image/jpg;base64,{{profile}}" id="profile_image1" >
+  </label>
+ <input type="file" name="proimage" id="profile_images" onchange="loadFile(event)"  style="display:none;">
+
+ <input type="submit" value="save image" style="height:25px;width:80px;color:white;background:blue;margin-left:340px;border:transparent;">
+</form>
+ <form method="post" enctype="multipart/form-data" >{% csrf_token %}
+ <input type="text" value="{{id}}" name="id" id="id" style="border:transparent"><br><br>
+ <div id="profile_details">
+ <label for="profile_name">Name<br>
+  <div id="line"></div>
+ <input type="text" name="name" placeholder="Enter Your Name" id="profile_name" value="{{name}}">
+  </label><br><br>
+ <label for="profile_bod">Date of Birth<br>
+    <div id="line"></div>
+  <input type="text" name="bod" placeholder="DD/MM/YYYY"  id="profile_bod" value="{{bod}}">
+ </label><br><br>
+ <label for="profile_address">Address<br>
+    <div id="line"></div>
+  <input type="text" name="address" placeholder="Address" id="profile_address" value="{{address}}">
+ </label><br><br>
+ <label for="profile_email">Email<br>
+    <div id="line"></div>
+  <input type="text" name="email" placeholder="example@gmail.com" id="profile_email" value="{{email}}">
+ </label><br><br>
+ <label for="profile_phone">phone Number<br>
+    <div id="line"></div>
+  <input type="text" name="number" placeholder="+91-XXXXX XXXXX" id="profile_phone" value="{{number}}">
+ </label><br>
+ <input type="submit" value="save" style="height:25px;width:80px;color:white;background:blue;margin-left:70px;border:transparent;">
+</div></form>
+
+</div>
+   </div>
+  </div>
+  <div class="main_pg"  id="main_pg2">
+   <div id="upload">
+    <div id="upload_scroll">
+     <div id="heading"><h1>Upload</h1></div>
+
+        {% if image %}
+        {% for image in image %}
+        <label for="image2">
+         <div id="mac1">
+          <img src="data:image/jpg;base64,{{profile}}"height="96px" id="image2" width="96px">
+         </div>
+      </label>
+<h3 id="ids">{{id}} </h3>
+<div id="lines"></div>
+        <img src="data:image/jpg;base64,{{image}}" height="500px" width="770px"><br><br><br><br>
+        {% endfor %}
+        {% endif %}
+        <form method="post" enctype="multipart/form-data" >{% csrf_token %}
+         <label for="image2">
+            <div id="mac1">
+             <img src="data:image/jpg;base64,{{profile}}"height="96px" id="image2" width="96px">
+            </div>
+         </label>
+   <h3 id="ids">{{id}} </h3>
+   <div id="lines"></div>
+           <div id="upload_files">
+            <label for="file">
+                <div id="upload_file1">
+                    <h1 id="up">upload</h1>
+                 <img id="imagee" height="450px" width="750px" style="margin-top:-230px;">
+                </div>
+            </label>
+            <div id="upload_file"  >
+                <input type="file" name="myfile"  onchange="upload(event)"  id="file" style="display:none;" >
+            </div><br><br><input type="submit" id="upfile" style="background:blue;margin-left:370px;height:30px;color:white;" value="upload" ></div>
+         </form>
+         </div>
+    </div>
+ </div>
+  <div class="main_pg" id="main_pg3">
+   <div id="images_pg">
+    <img src="banner.jpg" height="500px" width="770px"><br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+   </div>
+  </div>
+  <div class="main_pg" id="main_pg4">
+<div id="main_pgmm">
+<div id="pgs">
+    <nav>
+        <ol onclick="colorchangeone(event)">
+        {% for key in sergesions %}
+         {% for i,j in key.items %}
+         {% for k in j %}
+          {% if k.id is not None %}
+        <a href="#{{k.id}}{{k.email}}">
+         {% endif %}
+         {% endfor %}
+         {% endfor %}
+         <li >
+                 <div id="all">
+                  {% for i,j in key.items %}
+                 <label for="image2">
+                     <div id="mac1">
+                      {% for k in j %}
+                          {% if k.profile is not None %}
+                         <img src="data:image/jpg;base64,{{k.profile}}" height="96px" id="image2" width="96px">
+                          {% endif %}
+                         <h6 id="ids">{{k.id}}</h6>
+                      {% endfor %}
+                     </div>
+                 </label>
+
+         {% endfor %}
+                 </div>
+         </li>
+        </a><div id="request"><input type="submit" value="request" style="background:blue;border:transparent;" ></div>
+
+         {% endfor %}
+        </ol>
+    </nav>
+</div>
+<div id="main_pg421">
+     {% for key in sergesions %}
+            {% for i,j in key.items %}
+               {% for k in j %}
+ {% if k.id is not None %}
+     <div class="main_pg42" id="{{k.id}}{{k.email}}" style="background:white;height:900px;position:relative;">
+   <div id="profile">
+ <div id="profile_image">
+  <label for="profile_image1">
+   <img src="data:image/jpg;base64,{{k.profile}}" id="profile_image1" ></label>
+ <input type="submit" value="{{k.id}}" name="id" id="id">
+ <div id="profile_details">
+  <h4 id="profile_name"><i>Name:{{k.id}}</i></h4>
+  <div id="line"></div>
+  <h4 id="profile_bod"> <i>DateofBirth:{{k.bod}}</i></h4>
+    <div id="line"></div>
+  <h4 id="profile_address"><i>Address:{{k.address}}</i></h4>
+    <div id="line"></div>
+  <h4 id="profile_email"><i>Email:{{k.email}}</i></h4>
+    <div id="line"></div>
+  <h4 id="profile_phone"><i>phoneNumber:{{k.number}}</i></h4>
+    <div id="line"></div>
+  {% for image in k.image %}
+  {% if image is not None %}
+        <label for="image2" style="margin-left:-50px">
+         <div id="mac1">
+          <img src="data:image/jpg;base64,{{k.profile}}"height="96px" id="image2" width="96px" style="margin-left:-50px"><h4 id="id" style="margin-left:-50px">{{k.id}} </h4>
+         </div>
+      </label>
+<div id="line" style="margin-left:-50px;width:500px;"></div><br>
+        <img src="data:image/jpg;base64,{{image}}" height="300px" width="500px" style="margin-left:-50px"><br><br><br><br>
+   {% endif %}
+
+        {% endfor %}
+ </div>
+</div>
+   </div>
+  </div>
+ {% endif %}
+  {% endfor %}
+ {% endfor %}
+ {% endfor %}
+</div>
+</div>
+</div>
+  <div class="main_pg"  id="main_pg5">
+   <div id="images_pg">
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+   </div>
+  </div>
+  <div class="main_pg"  id="main_pg6">
+   <div id="images_pg">
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+   </div>
+  </div>
+  <div class="main_pg" id="main_pg7">
+   <div id="images_pg">
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="banner.jpg" height="500px" width="770px">
+    <br>
+    <br>
+    <br>
+    <br>
+   </div>
+  </div>
+    </div>
+   </div>
+  <div id="left_bar"> <label for="image">
+    <div id="bc">
+     <img src="data:image/jpg;base64,{{profile}}" height="96px" id="image" width="96px">
+    </div> </label>
+   <h3 id="name"> {{id}}</h3>
+   <nav id="left_bar1">
+    <ul onclick="colorchange(event)">
+     <a href="#main_pg1"><li id="one" >Profile</li></a>
+     <a href="#main_pg2"><li id="two">upload</li></a>
+     <a href="#main_pg3"><li id="three">friends</li></a>
+     <a href="#main_pg4"><li id="four">friend requests</li></a>
+     <a href="#main_pg5"><li id="five">photos</li></a>
+     <a href="#main_pg6"><li id="six">videos</li></a>
+     <a href="#main_pg7"><li id="seven">settings</li></a>
+    </ul>
+   </nav>
+  </div>
+  <div id="right_bar">
+   <h2 id="head">Messages</h2>
+   <div id="right_bar1"> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6> <label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+     <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid" >jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6><label for="image1">
+     <div id="mac">
+      <img src="banner.jpg" height="96px" id="image1" width="96px">
+     </div> </label>
+    <h6 id="mesid">jhghsklsjhj</h6>
+   </div>
+  </div>
+ </body>
+</html>

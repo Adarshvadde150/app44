@@ -1,0 +1,33 @@
+<html><title>create</title>
+<style>body{background:linear-gradient(pink,blue);
+padding-left:500px;
+padding-top:200px;}
+#create{
+height:340px;
+padding-left:30px;
+padding-top:15px;
+width:350px;
+background:white;
+border-radius:30px;}
+.create{border:3px solid black;
+width:280px;
+height:320px;
+border-radius:20px;
+padding-left:20px;}</style>
+<body>
+<form  method='POST'>{% csrf_token %}
+<div id ='create'>
+<div class='create'>
+<h2>Name</h2>
+<input type="text" name="name"  required>
+<h2>Email </h2>
+<input type="email" name="email" required>
+<h2>Password</h2>
+<input type="password" name="password" required>
+<br>
+<input type="submit" value="create account">
+</div>
+</div>
+</form>
+</body>
+</html>

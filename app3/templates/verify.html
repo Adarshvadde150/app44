@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>verify</title>
+<meta content="width=device-width,initial-scale=1.0">
+<style>#verify{background: linear-gradient(pink,blue);height:900px;width:1542px;margin-left: -30px;margin-top:-20px;position:fixed;}
+.verify{margin-left:600px;margin-top:250px;background: white;width:260px;height:300px;padding:20px 20px 20px 20px;border-radius:20px;}
+#verify1{border:2px solid black;border-radius:20px;padding:20px 20px 0px 20px;}
+    </style>
+</head>
+<body>
+    <div id ="verify">
+        <div class="verify">
+            <form  method='POST' >{% csrf_token %}
+                <div id="verify1">
+                    {{content}}
+                 <label>Conform User Name</label>
+                 <br><input type="text" name="username" required>
+                 <br><br><lable> Conform Email</lable>
+            <br><input type="email" name="conemail" required>
+            <br><br><label>Conform Password</label>
+            <br><input type="password" name="conpassword" required><br>
+            <br><br<label>Enter verification code</label>
+                <br><input type="text"  name="otp" required><br>
+                <br><input type="submit" value="verify" id="submit">
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
