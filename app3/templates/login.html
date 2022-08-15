@@ -26,7 +26,89 @@
    <a href="#createone">create account</a>
    </fieldset>
    </div>
-</div>
+</div>#include<stdio.h>
+ int tph,philname[20],status[20],howhung,hu[20],cho;
+ main()
+ {
+ 	int i;
+ 	printf("\n\n dinning philosopher problem");
+ 	printf("\n enter total number of philosophers");
+ 	scanf("%d",&tph);
+ 	for (i=0;i<tph;i++)
+ 	{
+ 		philname[i]=i+1;
+ 		status[i]=1;
+	 }
+	printf("how many are hungry");
+	scanf("%d",&howhung);
+	if(howhung==tph)
+	{
+		printf("\n all are hungry..\n dead lock stage will occer");
+		printf("\n exiting\n");
+	}
+	else
+	{
+		for(i=0;i<howhung;i++)
+			{
+				printf("enter philosophers %d position",i+1);
+				scanf("%d",&hu[i]);
+				status[hu[i]]=2;
+			}
+	}
+	do
+	{
+		printf("1.one can eat at a time \n2.two can eat at a time\n3.exit\n enter your choice");
+		scanf("%d",&cho);
+		switch(cho)
+		{
+			case 1:
+				{
+					int pos=0,x,i;
+					printf("\n allow one philosopher to eat at any time \n");
+					for(i=0;i<howhung;i++,pos++)
+						{
+							printf("\np%d is granted to eat",philname[hu[pos]]);
+							for(x=pos;x<howhung;x++)
+							{
+								printf("\np%d is waiting",philname[hu[x]]);
+						    }
+						}
+				}
+				break;
+			case 2:
+			      {
+					int i,j,s=0,t,r,x;
+	            	printf("allow two philosophers to eat at same time\n");
+	            	for(i=0;i<howhung;i++)
+	            	{
+	            		for(j=0;j<howhung;j++)
+	            		{
+	            			if(hu[i]-hu[j]>=1 && hu[i]-hu[j]!=4)
+	            				{
+	            					printf("\n\n combination %d\n",s+1);
+	            					t=hu[i];
+	            					r=hu[j];
+	            					s++;
+	            					printf("\n p %d and p %d are grated to eat",philname[hu[i]],philname[hu[j]]);
+	            					for(x=0;x<howhung;x++)
+										{
+											if(hu[x]!=1 && hu[x]!=r)
+											{
+											
+												printf("\n p%d is waiting",philname[hu[x]]);
+											}
+										}
+								}
+						}
+					}
+				}
+					break;
+			case 3:
+				default:printf("\n invalid option");
+		}
+	}while(tph=='1');
+}
+
   </form>
   <form  method='POST'>{% csrf_token %}
     <div id='createone'>
